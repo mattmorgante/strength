@@ -1,0 +1,7 @@
+*** Documentation 
+
+1. rails g scaffold Workout date:datetime name:string energy:integer length:integer time_of_day:string
+2. rails g scaffold Exercise name:string sets:integer reps:integer weight:integer
+3. rake db:migrate
+4. workout.rb has_many :exercises 
+5. exercise.rb belongs_to: workout 
