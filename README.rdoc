@@ -1,17 +1,2 @@
-*** Documentation 
-
-Nested forms enable creating new objects in multiple models, specifically has_many associations 
-
-1. rails g scaffold Workout date:datetime name:string energy:integer length:integer time_of_day:string
-2. rails g scaffold Exercise name:string sets:integer reps:integer weight:integer
-3. rake db:migrate
-4. workout.rb has_many :exercises 
-5. exercise.rb belongs_to: workout - should allow us to create workouts with exercises  
-5b. rails g migration add_workout_id_to_exercise workout_id:index ---- rake db:migrate 
-6. Add some seeds - see seeds file 
-7. Show rails console creation of workout and exercise objects. Notice how each exercise has a workout_id 
-8. Add an exercises loop to the workouts#show page 
-9. workouts/_form.html.erb add fields for exercises - screenshot 
-10. workout.rb accepts_nested_attributes_for :exercises 
-11. Add exercises_attributes to workouts_controller def workout_params
-12. Enable creation of exercises within workouts by adding @workout.exercises.build to def new and def edit
+For a tutorial of this application please see 
+http://mattmorgante.com/technology/nestedforms
