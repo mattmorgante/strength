@@ -31,6 +31,28 @@
     <%= f.label :time_of_day %><br>
     <%= f.text_field :time_of_day %>
   </div>
+
+  <!-- EXERCISES -->
+  <h4>Exercises</h4> 
+    <%= f.fields_for :exercises do |exercise| %> 
+      <div class="field"> 
+        <%= exercise.label :name %><br> 
+        <%= exercise.text_field :name %>
+      </div>
+      <div class="field"> 
+        <%= exercise.label :sets %><br> 
+        <%= exercise.number_field :sets %>
+      </div>
+      <div class="field"> 
+        <%= exercise.label :reps %><br> 
+        <%= exercise.number_field :reps %>
+      </div>
+      <div class="field"> 
+        <%= exercise.label :weight %><br> 
+        <%= exercise.number_field :weight %>
+      </div>
+    <% end %> 
+
   <div class="actions">
     <%= f.submit %>
   </div>

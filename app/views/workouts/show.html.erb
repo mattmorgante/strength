@@ -25,5 +25,16 @@
   <%= @workout.time_of_day %>
 </p>
 
+<h4>Exercises</h2> 
+<% if @workout.exercises.any? %> 
+  <ul><% @workout.exercises.each do |exercise| %> 
+    <li><%= link_to exercise.name, exercise %></li> 
+  <% end %> 
+<% else %> 
+  <p><strong>Please add some exercises to this workout</strong></p>
+<% end %> 
+
+</br>
+
 <%= link_to 'Edit', edit_workout_path(@workout) %> |
 <%= link_to 'Back', workouts_path %>
