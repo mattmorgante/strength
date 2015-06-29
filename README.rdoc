@@ -14,3 +14,4 @@ Nested forms enable creating new objects in multiple models, specifically has_ma
 9. workouts/_form.html.erb add fields for exercises - screenshot 
 10. workout.rb accepts_nested_attributes_for :exercises 
 11. Add exercises_attributes to workouts_controller def workout_params
+12. Enable creation of exercises within workouts by adding @workout.exercises.build to def new and def edit

@@ -15,4 +15,6 @@ end
 
 ['Lat Pull Down', 'Pull Ups'].each do |ex|
   back_and_biceps.exercises.create(name: ex)
-end 
+end
+
+ 
